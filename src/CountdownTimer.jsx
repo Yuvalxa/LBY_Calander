@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import quotesData from './quotes.json';
-import picturesData from './pictures.json';
 import './CountdownTimer.css';
 
 // Import all day images so Vite processes them
@@ -32,39 +31,15 @@ import day25 from './images/day-25.svg';
 import day26 from './images/day-26.svg';
 import day27 from './images/day-27.svg';
 import day28 from './images/day-28.svg';
-import logoImage from './images/logo.png'; // or .jpg, .svg
+import logoImage from './images/logo/logo.png';
 
-// Map day numbers to imported images
-const imageMap = {
-  1: day01,
-  2: day02,
-  3: day03,
-  4: day04,
-  5: day05,
-  6: day06,
-  7: day07,
-  8: day08,
-  9: day09,
-  10: day10,
-  11: day11,
-  12: day12,
-  13: day13,
-  14: day14,
-  15: day15,
-  16: day16,
-  17: day17,
-  18: day18,
-  19: day19,
-  20: day20,
-  21: day21,
-  22: day22,
-  23: day23,
-  24: day24,
-  25: day25,
-  26: day26,
-  27: day27,
-  28: day28,
-};
+// Array of all images for slideshow
+const images = [
+  day01, day02, day03, day04, day05, day06, day07, day08,
+  day09, day10, day11, day12, day13, day14, day15, day16,
+  day17, day18, day19, day20, day21, day22, day23, day24,
+  day25, day26, day27, day28,
+];
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -73,16 +48,15 @@ export default function CountdownTimer() {
     minutes: 0,
     seconds: 0,
   });
-  const [currentImageIndex, setCurrentImageIndex] = useState(1);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentQuote, setCurrentQuote] = useState('');
   const [quoteType, setQuoteType] = useState('');
   const [currentPicture, setCurrentPicture] = useState('');
-  const [pictureCaption, setPictureCaption] = useState('');
 
   // Slideshow effect - change image every 10 seconds
   useEffect(() => {
     const slideshowTimer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev % 28) + 1);
+      setCurrentImageIndex((prev) => (prev + 1) % 28);
     }, 10000);
 
     return () => clearInterval(slideshowTimer);
@@ -90,9 +64,8 @@ export default function CountdownTimer() {
 
   // Update displayed image when slideshow index changes
   useEffect(() => {
-    if (imageMap[currentImageIndex]) {
-      setCurrentPicture(imageMap[currentImageIndex]);
-      setPictureCaption(`Slideshow - Image ${currentImageIndex} of 28`);
+    if (images[currentImageIndex]) {
+      setCurrentPicture(images[currentImageIndex]);
     }
   }, [currentImageIndex]);
 
@@ -170,8 +143,7 @@ export default function CountdownTimer() {
 
       {currentPicture && (
         <div className="picture-display">
-          <img src={currentPicture} alt="Daily LBY Picture" className="daily-picture" />
-          <p className="picture-caption">{pictureCaption}</p>
+          <img src={currentPicture} alt="Gallery" className="daily-picture" />
         </div>
       )}
 

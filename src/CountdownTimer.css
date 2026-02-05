@@ -104,15 +104,14 @@
 }
 
 .daily-picture {
-  max-width: 400px;
-  width: 100%;
+  max-width: 600px;
+  width: 90%;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
   border: 3px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: cover;
-  aspect-ratio: 4 / 5;
+  object-fit: contain;
 }
 
 .daily-picture:hover {
@@ -274,7 +273,7 @@
   }
 
   .daily-picture {
-    max-width: 350px;
+    max-width: 450px;
   }
 
   .picture-caption {
@@ -327,7 +326,7 @@
   }
 
   .daily-picture {
-    max-width: 280px;
+    max-width: 380px;
   }
 
   .picture-caption {

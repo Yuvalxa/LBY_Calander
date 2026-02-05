@@ -32,6 +32,7 @@ import day25 from './images/day-25.svg';
 import day26 from './images/day-26.svg';
 import day27 from './images/day-27.svg';
 import day28 from './images/day-28.svg';
+import logoImage from './images/logo.png'; // or .jpg, .svg
 
 // Map day numbers to imported images
 const imageMap = {
@@ -128,8 +129,16 @@ export default function CountdownTimer() {
   return (
     <div className="countdown-container">
       <div className="header">
-        <h1>⏳ LBY's Last Days ⏳</h1>
-        <p className="subtitle">Lior ben Yair Departure Countdown</p>
+        <div className="header-content">
+          <div className="title-section">
+            <h1>LBY's Last Days In <span className="operative-text">Operative</span></h1>
+            <p className="subtitle">Lior ben Yair Departure Countdown</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="logo-section">
+        <img src={logoImage} alt="Operative Logo" className="operative-logo" />
       </div>
 
       <div className="timer-display">

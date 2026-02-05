@@ -8,6 +8,14 @@
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
+  position: relative;
+}
+
+.logo-section {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  flex-shrink: 0;
 }
 
 .header {
@@ -16,17 +24,49 @@
   animation: slideDown 0.8s ease-out;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.logo-section {
+  flex-shrink: 0;
+}
+
+.operative-logo {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  animation: popIn 0.6s ease-out;
+}
+
+.title-section {
+  text-align: left;
+}
+
 .header h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   font-weight: 800;
   letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.operative-text {
+  color: #ffa500;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  margin: 10px 0 0 0;
+  font-size: 1.1rem;
+  margin: 8px 0 0 0;
   opacity: 0.95;
   font-weight: 300;
   letter-spacing: 1px;
@@ -242,8 +282,21 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .title-section {
+    text-align: center;
+  }
+
+  .operative-logo {
+    height: 60px;
+  }
+
   .header h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .timer-display {
@@ -282,8 +335,12 @@
 }
 
 @media (max-width: 480px) {
+  .operative-logo {
+    height: 50px;
+  }
+
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .subtitle {
@@ -333,4 +390,11 @@
     font-size: 0.9rem;
     margin-top: 10px;
   }
+  .operative-logo {
+  height: 40px;
+  width: auto;
+  margin: 0 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
 }

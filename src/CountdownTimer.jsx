@@ -73,13 +73,31 @@ export default function CountdownTimer() {
     minutes: 0,
     seconds: 0,
   });
+  const [currentImageIndex, setCurrentImageIndex] = useState(1);
   const [currentQuote, setCurrentQuote] = useState('');
   const [quoteType, setQuoteType] = useState('');
   const [currentPicture, setCurrentPicture] = useState('');
   const [pictureCaption, setPictureCaption] = useState('');
 
+  // Slideshow effect - change image every 10 seconds
   useEffect(() => {
-    // Calculate days remaining and get quote and picture
+    const slideshowTimer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev % 28) + 1);
+    }, 10000);
+
+    return () => clearInterval(slideshowTimer);
+  }, []);
+
+  // Update displayed image when slideshow index changes
+  useEffect(() => {
+    if (imageMap[currentImageIndex]) {
+      setCurrentPicture(imageMap[currentImageIndex]);
+      setPictureCaption(`Slideshow - Image ${currentImageIndex} of 28`);
+    }
+  }, [currentImageIndex]);
+
+  // Calculate countdown timer and get daily quote
+  useEffect(() => {
     const calculateCountdown = () => {
       const targetDate = new Date('2026-03-05T00:00:00').getTime();
       const now = new Date().getTime();
@@ -93,30 +111,17 @@ export default function CountdownTimer() {
 
         setTimeLeft({ days, hours, minutes, seconds });
 
-        // Get quote and picture for current day (1-indexed from today)
+        // Get quote for current day (1-indexed from today)
         const daysFromStart = Math.max(1, 28 - days);
         const quote = quotesData.quotes.find((q) => q.day === daysFromStart);
         if (quote) {
           setCurrentQuote(quote.text);
           setQuoteType(quote.type);
         }
-
-        // Get picture for current day
-        if (imageMap[daysFromStart]) {
-          setCurrentPicture(imageMap[daysFromStart]);
-        }
-        const picture = picturesData.pictures.find((p) => p.day === daysFromStart);
-        if (picture) {
-          setPictureCaption(picture.caption);
-        }
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         setCurrentQuote("🎉 LBY HAS LEFT! 🎉 The legend has departed!");
         setQuoteType('final');
-        if (imageMap[28]) {
-          setCurrentPicture(imageMap[28]);
-        }
-        setPictureCaption("The Legend Has Departed!");
       }
     };
 

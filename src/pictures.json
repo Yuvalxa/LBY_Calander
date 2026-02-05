@@ -1,0 +1,32 @@
+{
+  "pictures": [
+    { "day": 1, "image": "/LiorProject/src/images/day-01.svg", "caption": "Day 1 - The Beginning of the End" },
+    { "day": 2, "image": "/LiorProject/src/images/day-02.svg", "caption": "Day 2 - Countdown Intensifies" },
+    { "day": 3, "image": "/LiorProject/src/images/day-03.svg", "caption": "Day 3 - Three Down, Twenty-Five to Go" },
+    { "day": 4, "image": "/LiorProject/src/images/day-04.svg", "caption": "Day 4 - A Quarter of the Way There" },
+    { "day": 5, "image": "/LiorProject/src/images/day-05.svg", "caption": "Day 5 - Still Here and Hilarious" },
+    { "day": 6, "image": "/LiorProject/src/images/day-06.svg", "caption": "Day 6 - The Legend Continues" },
+    { "day": 7, "image": "/LiorProject/src/images/day-07.svg", "caption": "Day 7 - One Week Wonder" },
+    { "day": 8, "image": "/LiorProject/src/images/day-08.svg", "caption": "Day 8 - Getting Closer" },
+    { "day": 9, "image": "/LiorProject/src/images/day-09.svg", "caption": "Day 9 - The Stretch Begins" },
+    { "day": 10, "image": "/LiorProject/src/images/day-10.svg", "caption": "Day 10 - Double Digits" },
+    { "day": 11, "image": "/LiorProject/src/images/day-11.svg", "caption": "Day 11 - Halfway-ish" },
+    { "day": 12, "image": "/LiorProject/src/images/day-12.svg", "caption": "Day 12 - The Peak Before the Fall" },
+    { "day": 13, "image": "/LiorProject/src/images/day-13.svg", "caption": "Day 13 - Unlucky Thirteen" },
+    { "day": 14, "image": "/LiorProject/src/images/day-14.svg", "caption": "Day 14 - Officially Halfway There" },
+    { "day": 15, "image": "/LiorProject/src/images/day-15.svg", "caption": "Day 15 - The Downhill Slide" },
+    { "day": 16, "image": "/LiorProject/src/images/day-16.svg", "caption": "Day 16 - Two Weeks Left" },
+    { "day": 17, "image": "/LiorProject/src/images/day-17.svg", "caption": "Day 17 - The Tension Builds" },
+    { "day": 18, "image": "/LiorProject/src/images/day-18.svg", "caption": "Day 18 - Almost There" },
+    { "day": 19, "image": "/LiorProject/src/images/day-19.svg", "caption": "Day 19 - Single Digits Await" },
+    { "day": 20, "image": "/LiorProject/src/images/day-20.svg", "caption": "Day 20 - The Home Stretch" },
+    { "day": 21, "image": "/LiorProject/src/images/day-21.svg", "caption": "Day 21 - One Week Left" },
+    { "day": 22, "image": "/LiorProject/src/images/day-22.svg", "caption": "Day 22 - The Final Week Begins" },
+    { "day": 23, "image": "/LiorProject/src/images/day-23.svg", "caption": "Day 23 - Mere Days Away" },
+    { "day": 24, "image": "/LiorProject/src/images/day-24.svg", "caption": "Day 24 - Four Days to Freedom" },
+    { "day": 25, "image": "/LiorProject/src/images/day-25.svg", "caption": "Day 25 - Three Days Left" },
+    { "day": 26, "image": "/LiorProject/src/images/day-26.svg", "caption": "Day 26 - The Final Countdown" },
+    { "day": 27, "image": "/LiorProject/src/images/day-27.svg", "caption": "Day 27 - Tomorrow is the Day" },
+    { "day": 28, "image": "/LiorProject/src/images/day-28.svg", "caption": "Day 28 - IT'S TODAY!!!" }
+  ]
+}

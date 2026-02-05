@@ -97,6 +97,38 @@
   }
 }
 
+.picture-display {
+  margin: 40px 0;
+  animation: slideDown 0.8s ease-out 0.3s both;
+  text-align: center;
+}
+
+.daily-picture {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+.daily-picture:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+.picture-caption {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
 .quote-box {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -240,6 +272,14 @@
   .quote-text {
     font-size: 1.1rem;
   }
+
+  .daily-picture {
+    max-width: 350px;
+  }
+
+  .picture-caption {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -280,5 +320,18 @@
 
   .quote-text {
     font-size: 0.95rem;
+  }
+
+  .picture-display {
+    margin: 30px 0;
+  }
+
+  .daily-picture {
+    max-width: 280px;
+  }
+
+  .picture-caption {
+    font-size: 0.9rem;
+    margin-top: 10px;
   }
 }

@@ -4,41 +4,24 @@ import './CountdownTimer.css';
 
 // Import all day images so Vite processes them
 import day01 from './images/day-01.jpg';
-import day02 from './images/day-02.svg';
-import day03 from './images/day-03.svg';
-import day04 from './images/day-04.svg';
-import day05 from './images/day-05.svg';
-import day06 from './images/day-06.svg';
-import day07 from './images/day-07.svg';
-import day08 from './images/day-08.svg';
-import day09 from './images/day-09.svg';
-import day10 from './images/day-10.svg';
-import day11 from './images/day-11.svg';
-import day12 from './images/day-12.svg';
-import day13 from './images/day-13.svg';
-import day14 from './images/day-14.svg';
-import day15 from './images/day-15.svg';
-import day16 from './images/day-16.svg';
-import day17 from './images/day-17.svg';
-import day18 from './images/day-18.svg';
-import day19 from './images/day-19.svg';
-import day20 from './images/day-20.svg';
-import day21 from './images/day-21.svg';
-import day22 from './images/day-22.svg';
-import day23 from './images/day-23.svg';
-import day24 from './images/day-24.svg';
-import day25 from './images/day-25.svg';
-import day26 from './images/day-26.svg';
-import day27 from './images/day-27.svg';
-import day28 from './images/day-28.svg';
+import day02 from './images/day-02.png';
+import day03 from './images/day-03.png';
+import day04 from './images/day-04.png';
+import day05 from './images/day-05.png';
+import day06 from './images/day-06.png';
+import day07 from './images/day-07.png';
+import day08 from './images/day-08.png';
+import day09 from './images/day-09.png';
+import day10 from './images/day-10.png';
+import day11 from './images/day-11.png';
+import day12 from './images/day-12.png';
+import day13 from './images/day-13.png';
 import logoImage from './images/logo/logo.png';
 
 // Array of all images for slideshow
 const images = [
   day01, day02, day03, day04, day05, day06, day07, day08,
-  day09, day10, day11, day12, day13, day14, day15, day16,
-  day17, day18, day19, day20, day21, day22, day23, day24,
-  day25, day26, day27, day28,
+  day09, day10, day11, day12, day13
 ];
 
 export default function CountdownTimer() {
@@ -110,7 +93,7 @@ export default function CountdownTimer() {
         <div className="header-content">
           <div className="title-section">
             <h1>LBY's Last Days In <span className="operative-text">Operative</span></h1>
-            <p className="subtitle">Lior ben Yair Departure Countdown</p>
+            <p className="subtitle">Lior Ben Yair Departure Countdown</p>
           </div>
         </div>
       </div>

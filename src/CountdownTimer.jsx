@@ -39,7 +39,7 @@ export default function CountdownTimer() {
   // Slideshow effect - change image every 10 seconds
   useEffect(() => {
     const slideshowTimer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % 28);
+      setCurrentImageIndex((prev) => (prev + 1) % 14);
     }, 10000);
 
     return () => clearInterval(slideshowTimer);

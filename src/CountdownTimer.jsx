@@ -16,12 +16,14 @@ import day10 from './images/day-10.png';
 import day11 from './images/day-11.png';
 import day12 from './images/day-12.png';
 import day13 from './images/day-13.png';
+import day14 from './images/day-14.png';
+
 import logoImage from './images/logo/logo.png';
 
 // Array of all images for slideshow
 const images = [
   day01, day02, day03, day04, day05, day06, day07, day08,
-  day09, day10, day11, day12, day13
+  day09, day10, day11, day12, day13, day14
 ];
 
 export default function CountdownTimer() {
@@ -39,7 +41,7 @@ export default function CountdownTimer() {
   // Slideshow effect - change image every 10 seconds
   useEffect(() => {
     const slideshowTimer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % 14);
+      setCurrentImageIndex((prev) => (prev + 1) % 15);
     }, 10000);
 
     return () => clearInterval(slideshowTimer);
